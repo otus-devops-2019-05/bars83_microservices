@@ -1,0 +1,15 @@
+project = "your-docker-project-id"
+
+public_key_path = "~/.ssh/appuser.pub"
+
+project_public_key_path = "~/.ssh/appuser.pub"
+
+private_key_path = "~/.ssh/appuser"
+
+disk_image = "docker-ce-base"
+
+name = "load-balancer-rule"
+
+instances_count = 2
+
+source_ranges = "188.170.214.41/32"

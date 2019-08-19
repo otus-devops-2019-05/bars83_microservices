@@ -1,0 +1,19 @@
+---
+# tasks file for docker
+- name: Install python for Ansible
+  raw: (apt -y update && apt install -y python python-setuptools python-pip build-essential libssl-dev libffi-dev python-dev)
+  changed_when: False
+
+- name: Install python libraries for use docker with Ansible
+  pip:
+    name: docker
+    state: present
+
+- name: 'Add reddit app'
+  docker_container:
+    name: "{{ default_container_name }}"
+    image: "{{ default_container_image }}"
+    published_ports: "{{ default_published_ports }}"
+    state: started
+    detach: yes
+    restart_policy: unless-stopped

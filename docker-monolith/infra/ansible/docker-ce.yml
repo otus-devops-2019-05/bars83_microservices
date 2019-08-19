@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+
+  roles:
+    - role: haxorof.docker_ce
+      become: true
+
+    - role: reddit-app
+      vars:
+        -  default_container_image: "bars83/otus-reddit:1.0"
+        -  default_container_name: "reddit-app"
+        -  default_published_ports: "9292:9292"
