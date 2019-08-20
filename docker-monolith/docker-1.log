@@ -1,0 +1,5 @@
+REPOSITORY                                                                   TAG                     IMAGE ID            CREATED             SIZE
+bars83/ubuntu-tmp-file                                                       latest                  0b74ee4576d3        52 seconds ago      120MB
+ubuntu                                                                       16.04                   5e13f8dd4c1a        3 weeks ago         120MB
+
+Образ это зафиксированный набор слоёв. Контейнер - это сущность, созданная на базе образа, с дополнительным слоем для записи, а так же имеющая определенную обвязку - сеть, тома и т.п. 
