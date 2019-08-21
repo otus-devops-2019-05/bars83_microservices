@@ -5,7 +5,7 @@ WORKDIR $APP_HOME
 RUN apk --no-cache update && apk add --no-cache ruby-full=2.5.5-r0 ruby-dev=2.5.5-r0 build-base=0.5-r1 \
     && gem install bundler:1.17.2 --no-ri --no-rdoc \
     && bundle install \
-    && apk del build-base ruby-dev
+    && apk del ruby-dev build-base
 COPY . $APP_HOME
 ENV POST_SERVICE_HOST post
 ENV POST_SERVICE_PORT 5000

@@ -7,3 +7,4 @@ docker-monolith/infra/packer/variables.json
 .terraform/
 *.retry
 infra/*.log
+.env
