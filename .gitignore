@@ -8,3 +8,4 @@ docker-monolith/infra/packer/variables.json
 *.retry
 infra/*.log
 .env
+Gitlab_ci/
