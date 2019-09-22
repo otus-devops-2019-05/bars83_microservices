@@ -1,5 +1,9 @@
 # bars83_microservices
 bars83 microservices repository
+
+## Homework ?? - gitlab #1
+https://hub.docker.com/u/bars83/
+
 ## Homework #14 - docker #4
 1) Working with different docker network types - none, host, bridge
 2) Use docker-compose to run containerized reddit app
