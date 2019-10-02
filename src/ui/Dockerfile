@@ -1,14 +1,25 @@
-FROM alpine:3.10
+FROM alpine:3.2 
+
 ENV APP_HOME /app
-COPY Gemfile* $APP_HOME/
+ENV OLD_BUNDLER_VERSION 1.16.1
 WORKDIR $APP_HOME
-RUN apk --no-cache update && apk add --no-cache ruby-full=2.5.5-r0 ruby-dev=2.5.5-r0 build-base=0.5-r1 \
-    && gem install bundler:1.17.2 --no-ri --no-rdoc \
+ADD Gemfile* $APP_HOME/
+
+RUN apk update \ 
+    && apk upgrade \
+    && apk add ruby ruby-json ruby-bundler ruby-dev build-base  \
+    && apk add ca-certificates \
+    && gem install bundler -v $OLD_BUNDLER_VERSION \
+    && gem install json \
     && bundle install \
-    && apk del ruby-dev build-base
-COPY . $APP_HOME
+    && apk del build-base ruby-bundler ruby-dev \
+    && rm -rf /var/cache/apk/*
+
+ADD . $APP_HOME
+
 ENV POST_SERVICE_HOST post
 ENV POST_SERVICE_PORT 5000
 ENV COMMENT_SERVICE_HOST comment
 ENV COMMENT_SERVICE_PORT 9292
+
 CMD ["puma"]
