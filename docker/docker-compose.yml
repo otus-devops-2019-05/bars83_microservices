@@ -53,7 +53,29 @@ services:
       - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|host|etc)($$|/)"'
     networks:
       - back_net
-    
+  
+  mongodb-exporter:
+    image: bars83/percona_mongodb_exporter:1.0
+    command:
+      - '--mongodb.uri=mongodb://post_db'
+      - '--collect.database'
+    networks:
+      - back_net
+
+  blackbox-exporter:
+    image: prom/blackbox-exporter:v0.15.1
+    ports:
+      - '9115:9115'
+    networks:
+      - back_net
+      - front_net
+
+  cloudprober:
+    image: bars83/cloudprober
+    networks:
+      - back_net
+      - front_net
+
 volumes:
   post_db:
   prometheus_data:
