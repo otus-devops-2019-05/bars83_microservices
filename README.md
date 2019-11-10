@@ -1,5 +1,16 @@
 # bars83_microservices
 bars83 microservices repository
+
+## Homework #15 - Gitlab CI
+1) Bootsrap Gitlab with docker-compose
+2) Setup Gitlab - create group and projects
+3) Add Gitlab as remote for our microservices projects
+4) Play with CI pipelines
+5) Play with gitlab environments (static and dynamic)
+6) (* task) - edit "build" job for docker image building
+7) (** task) - provision gitlab runner with ansible using gcp inventory (iaac in `gitlab-ci/infra`)
+8) (** task) - configure Slack notifications for Gitlab pipeline events
+
 ## Homework #14 - docker #4
 1) Working with different docker network types - none, host, bridge
 2) Use docker-compose to run containerized reddit app

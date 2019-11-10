@@ -1,13 +1,14 @@
 plugin: gcp_compute
 projects:
-  - your-project-id
+  - *********
 auth_kind: serviceaccount
-service_account_file: json-with-creds
+service_account_file: ~/**********.json
 regions:
   - us-central1
 zones: # populate inventory with instances in these regions
   - us-central1-a
-filters: []
+filters:
+  - name=*
 scopes:
  - 'https://www.googleapis.com/auth/cloud-platform'
  - 'https://www.googleapis.com/auth/compute.readonly'

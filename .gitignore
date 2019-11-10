@@ -8,3 +8,6 @@ docker-monolith/infra/packer/variables.json
 *.retry
 infra/*.log
 .env
+gitlab-ci/infra/ansible/inventory.gcp.yml
+gitlab-ci/infra/ansible/roles
+gitlab-ci/infra/ansible/vars/gitlab-runner.yml
