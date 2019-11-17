@@ -296,8 +296,8 @@
       "list": []
     },
     "time": {
-      "from": "2019-09-23T14:50:37.347Z",
-      "to": "2019-09-23T16:41:23.501Z"
+      "from": "now-24h",
+      "to": "now"
     },
     "timepicker": {
       "refresh_intervals": [
