@@ -3,6 +3,15 @@ bars83 microservices repository
 
 Docker images placed in https://hub.docker.com/u/bars83/
 
+## Homework #18 - Logging
+1) Update reddit-app to looging-ready code
+2) Add docker-compose-logging.yml to describe EFK (Elasticsearch+Fluentd+Kibana) services
+3) Play with EFK structured logs
+4) Set unstructured logs parsing
+5) (*) - add fluentd `grok` pattern to parse UI service logs
+6) Using Zipkin distributed tracing system
+7) (*) - on [bugged-code](https://github.com/Artemmkin/bugged-code) Zipin traicing shows 3sec delay while getting post in `post` service. It seem that developer forget to remove `time.sleep(3)` on [line 167 of post-py/post_app.py](https://github.com/Artemmkin/bugged-code/blob/e16d0e6bfec61a04fc38734af8e0466ed6e64e76/post-py/post_app.py#L167). Zipkin tracing was very helpful to find this botleneck.
+
 ## Homework #17 - Monitoring-2
 1) Separate docker-compose-monitoring.yml from base docker-compose file
 2) Using cAdvisor to monitor docker containers
