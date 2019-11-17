@@ -8,7 +8,7 @@ bars83 microservices repository
 4) (*) - MongoDB monitoring using https://github.com/percona/mongodb_exporter
 5) (*) - play with Blackbox exporter (https://github.com/prometheus/blackbox_exporter)
 6) (*) - play with Cloudprober exporter
-7) Add Makefile to automate images preparing, building and pushing
+7) (*) - add Makefile to automate images preparing, building and pushing
 
 Docker images placed in https://hub.docker.com/u/bars83/
 
