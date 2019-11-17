@@ -10,11 +10,11 @@ bars83 microservices repository
 6) Play with namespaces
 7) Setup Kubernetes Dashboard
 8) Start GKE cluster
-9) Bootstrap GKE cluster using Terraform (`kubernetes/terraform`)
-10) (*) доступ к Kubernetes Dashboard:
-    * Установка Dashboard - `kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml`
-    * Создание ServiceAccount и ClusterRoleBinding `kubectl apply -f dashboard/dashboard-adminuser.yaml`
-    * Получение токена для доступа - `kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')`
+9) (*) - bootstrap GKE cluster using Terraform (`kubernetes/terraform`)
+10) (*) - access to Kubernetes Dashboard:
+    * install Dashboard - `kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml`
+    * create ServiceAccount and ClusterRoleBinding `kubectl apply -f dashboard/dashboard-adminuser.yaml`
+    * Get dasboard access token - `kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')`
 
 
 ## Homework #19 - Kubernetes-1
