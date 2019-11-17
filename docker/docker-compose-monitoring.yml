@@ -44,6 +44,8 @@ services:
     image: grafana/grafana:5.0.0
     volumes:
       - grafana_data:/var/lib/grafana
+      - ../monitoring/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources/
+      - ../monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards/
     environment:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=secret
@@ -62,6 +64,23 @@ services:
       - 9093:9093
     networks: 
       - back_net
+
+  trickster:
+    image: ${USERNAME}/trickster
+    ports:
+      - 9089:9089
+    depends_on:
+      - prometheus
+    networks:
+      - back_net
+
+  autoheal:
+    image: willfarrell/autoheal
+    restart: unless-stopped
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
+    environment:
+      - AUTOHEAL_CONTAINER_LABEL=all
 
 volumes:
   prometheus_data:

@@ -69,3 +69,12 @@ scrape_configs:
   - job_name: 'cloudprober'
     static_configs:
       - targets: ['cloudprober:9313']
+
+  - job_name: 'docker'
+    static_configs:
+      - targets: ['{host}:9323']
+
+  - job_name: 'telegraf'
+    static_configs:
+      - targets:
+        - 'telegraf:9273'
