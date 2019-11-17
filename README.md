@@ -1,6 +1,20 @@
 # bars83_microservices
 bars83 microservices repository
 
+## Homework #19 - Kubernetes-1
+1) Describe reddit-app in Kubernetes manifests
+2) Walked through [Kubernetes The Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
+3) (*/2) - try not so hard way, using [prepared ansible playbooks](git@github.com:zlbabe/Kubernetes-the-hard-way-with-Ansible.git):
+    * `git clone git@github.com:zlbabe/Kubernetes-the-hard-way-with-Ansible.git`
+    * `cd Kubernetes-the-hard-way-with-Ansible`
+    * `vagrant up`
+    * `ansible-playbook k8s.yml`
+
+ 
+  
+
+----
+
 Docker images placed in https://hub.docker.com/u/bars83/
 
 ## Homework #18 - Logging
