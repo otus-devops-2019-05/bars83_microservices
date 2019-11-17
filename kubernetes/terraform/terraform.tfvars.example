@@ -1,0 +1,6 @@
+project = "Your project id"
+region = "us-central1"
+zone = "us-central1-c"
+node_count = 2
+node_machine_type = "g1-small"
+node_disk_size = "20"
