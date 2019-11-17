@@ -5,7 +5,7 @@ Docker images placed in https://hub.docker.com/u/bars83/
 
 ## Homework #17 - Monitoring-2
 1) Separate docker-compose-monitoring.yml from base docker-compose file
-2) Using cAdvidor to monitor docker containers
+2) Using cAdvisor to monitor docker containers
 3) Using Grafana to metrics visualization - using dashboards from grafana.com, building custom dashboards
 4) Using Alermanager for metrics alerting in Slack channel
 5) (*) - update Makefile with new services
