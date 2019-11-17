@@ -2,6 +2,7 @@ docker/docker-monolith/infra/packer/variables.json
 .vagrant/
 *.tfstate
 *.tfstate.*.backup
+*.tfstate.lock.info
 *.tfstate.backup
 *.tfvars
 .terraform/
