@@ -15,9 +15,18 @@ before_script:
  - bundle install
 
 build_job:
+  image: docker:stable
   stage: build
+  tags:
+    - dind
+  before_script:
+    - docker info
   script:
     - echo 'Building'
+    - cd reddit/
+    - docker build -t bars83/reddit:$CI_COMMIT_SHORT_SHA .
+    - docker login -u $REGISTRY_USER -p $REGISTRY_PASSWORD
+    - docker push bars83/reddit:$CI_COMMIT_SHORT_SHA
 
 test_unit_job:
   stage: test
