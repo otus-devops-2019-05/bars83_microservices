@@ -1,8 +1,27 @@
 # bars83_microservices
 bars83 microservices repository
 
-## Homework ?? - gitlab #1
-https://hub.docker.com/u/bars83/
+## Homework #16 - Monitoring-1
+1) Run Prometheus container
+2) Monitoring Reddit microsevices with Prometheus
+3) Using Node Exporter to get host metrics
+4) (*) - MongoDB monitoring using https://github.com/percona/mongodb_exporter
+5) (*) - play with Blackbox exporter (https://github.com/prometheus/blackbox_exporter)
+6) (*) - play with Cloudprober exporter
+7) (*) - add Makefile to automate images preparing, building and pushing
+
+Docker images placed in https://hub.docker.com/u/bars83/
+
+
+## Homework #15 - Gitlab CI
+1) Bootsrap Gitlab with docker-compose
+2) Setup Gitlab - create group and projects
+3) Add Gitlab as remote for our microservices projects
+4) Play with CI pipelines
+5) Play with gitlab environments (static and dynamic)
+6) (* task) - edit "build" job for docker image building
+7) (** task) - provision gitlab runner with ansible using gcp inventory (iaac in `gitlab-ci/infra`)
+8) (** task) - configure Slack notifications for Gitlab pipeline events
 
 ## Homework #14 - docker #4
 1) Working with different docker network types - none, host, bridge
