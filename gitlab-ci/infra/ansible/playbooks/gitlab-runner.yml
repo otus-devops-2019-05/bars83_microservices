@@ -1,0 +1,13 @@
+---
+# install gitlab runner
+- name: Install and registr gitlab-runner
+  become: true
+  hosts: runners
+  vars_files:
+    - ../vars/gitlab-runner.yml
+  roles:
+    - role: riemers.gitlab-runner
+    
+    - role: marvinpinto.docker
+      tags: docker
+      become: true
