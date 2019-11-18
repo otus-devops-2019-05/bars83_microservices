@@ -25,6 +25,7 @@ services:
     networks:
       - back_net
       - front_net
+    
 
   prometheus:
     image: ${USER_NAME}/prometheus
@@ -78,7 +79,6 @@ services:
 
 volumes:
   post_db:
-  prometheus_data:
 
 networks:
   back_net:

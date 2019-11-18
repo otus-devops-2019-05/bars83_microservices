@@ -1,6 +1,20 @@
 # bars83_microservices
 bars83 microservices repository
 
+Docker images placed in https://hub.docker.com/u/bars83/
+
+## Homework #17 - Monitoring-2
+1) Separate docker-compose-monitoring.yml from base docker-compose file
+2) Using cAdvisor to monitor docker containers
+3) Using Grafana to metrics visualization - using dashboards from grafana.com, building custom dashboards
+4) Using Alermanager for metrics alerting in Slack channel
+5) (*) - update Makefile with new services
+6) (*) - get Docker daemon metrics https://medium.com/p/e02a6a5745a/responses/show), add Grafana dashboard (id=1229)
+7) (*) - using Telegraf to export Docker daemon metrics
+8) (*) - set up Alertmanager rule to fire on too high response latency of UI service by 95th percentile
+9) (**) - provision Grafana datasource and dashboards on container startup
+10) (***) - proxy Grafana to Prometheus requests with Trickster for caching
+
 ## Homework #16 - Monitoring-1
 1) Run Prometheus container
 2) Monitoring Reddit microsevices with Prometheus
@@ -9,9 +23,6 @@ bars83 microservices repository
 5) (*) - play with Blackbox exporter (https://github.com/prometheus/blackbox_exporter)
 6) (*) - play with Cloudprober exporter
 7) (*) - add Makefile to automate images preparing, building and pushing
-
-Docker images placed in https://hub.docker.com/u/bars83/
-
 
 ## Homework #15 - Gitlab CI
 1) Bootsrap Gitlab with docker-compose
