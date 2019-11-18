@@ -1,4 +1,4 @@
-docker-monolith/infra/packer/variables.json
+docker/docker-monolith/infra/packer/variables.json
 .vagrant/
 *.tfstate
 *.tfstate.*.backup
