@@ -2,6 +2,7 @@ docker/docker-monolith/infra/packer/variables.json
 .vagrant/
 *.tfstate
 *.tfstate.*.backup
+*.tfstate.lock.info
 *.tfstate.backup
 *.tfvars
 .terraform/
@@ -11,3 +12,4 @@ infra/*.log
 gitlab-ci/infra/ansible/inventory.gcp.yml
 gitlab-ci/infra/ansible/roles
 gitlab-ci/infra/ansible/vars/gitlab-runner.yml
+Gitlab_ci
