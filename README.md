@@ -1,5 +1,5 @@
 # bars83_microservices
-bars83 microservices repository
+[![Build Status](https://travis-ci.com/otus-devops-2019-05/bars83_microservices.png)](https://travis-ci.com/otus-devops-2019-05/bars83_microservices)
 
 ## Homework #21 - Kubernetes-3
 1) Services, kube-dns, nodePort, LoadBalancer, Ingress
