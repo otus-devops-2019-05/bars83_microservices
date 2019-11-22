@@ -1,6 +1,15 @@
 # bars83_microservices
 [![Build Status](https://travis-ci.com/otus-devops-2019-05/bars83_microservices.png)](https://travis-ci.com/otus-devops-2019-05/bars83_microservices)
 
+## Homework #22 - Kubernetes-4
+1) Helm - charts, templates, helpers, dependencies
+2) Tiller plugin
+3) Helm3
+4) GitLab - bootsrap from helm chart
+5) Push reddit microservices repos to GitLab
+6) GitLab CI
+7) (*) - use pipline triggering by call `curl --request POST --form "token=$CI_JOB_TOKEN" --form ref=master $CI_API_V4_URL/projects/1/trigger/pipeline` in end of `release` joib of each microservice
+
 ## Homework #21 - Kubernetes-3
 1) Services, kube-dns, nodePort, LoadBalancer, Ingress
 2) Secret, TLS Termination) 
