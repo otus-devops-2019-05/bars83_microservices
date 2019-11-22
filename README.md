@@ -1,5 +1,12 @@
 # bars83_microservices
-bars83 microservices repository
+[![Build Status](https://travis-ci.com/otus-devops-2019-05/bars83_microservices.png)](https://travis-ci.com/otus-devops-2019-05/bars83_microservices)
+
+## Homework #21 - Kubernetes-3
+1) Services, kube-dns, nodePort, LoadBalancer, Ingress
+2) Secret, TLS Termination) 
+3) (*) manifest with secret for UI Ingress - `kubernetes/reddit/ui-ingress-secret.yml`
+4) Network Policy
+5) Volumes, PV, PVC, StorageClass
 
 ## Homework #20 - Kubernetes-2
 1) Install `kubectl`
