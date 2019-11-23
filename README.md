@@ -1,6 +1,27 @@
 # bars83_microservices
 [![Build Status](https://travis-ci.com/otus-devops-2019-05/bars83_microservices.png)](https://travis-ci.com/otus-devops-2019-05/bars83_microservices)
 
+## Homework #23 - Kubernetes-5
+1) Install nginx-ingress with helm chart
+2) Fetch Prometheus helm chart and set custom values
+3) Play with Prometheus targets
+4) Set to collect data from kube-state-metrics, node-exporters
+5) Set service discovery for reddit microservices pods
+6) Play with relabels
+7) Install Grafana with helm chart
+8) Play with Grafana dashboards
+9) Using Grafana templating capabilities
+10) (*) - set Alermanager parameter in `custom_values.yml` to send notifications to Slack when nodes or api-server is unavailable
+11) (*) - install Prometheus Operator, set ServiceMonitor to `post` endpoint
+    * `helm install --namespace monitoring --name prom-operator stable/prometheus-operator`
+    * `kubectl apply -f kubernetes/prometheus-operator-servicemonitors/post-servicemonitor.yml`
+12) Bootstrap EFK stack
+13) (*) bootstrap EFK stack using helm charts
+     * `helm repo add elastic https://helm.elastic.co`
+     * `helm install --namespace logging --name elasticsearch -f kubernetes/Charts/EFK/elasticsearch_custom_values.yaml elastic/elasticsearch`
+     * `helm install --namespace logging --name kibana -f kubernetes/Charts/EFK/kibana_custom_values.yaml elastic/kibana`
+     * `helm install --namespace logging --name fluend stable/fluentd`
+
 ## Homework #22 - Kubernetes-4
 1) Helm - charts, templates, helpers, dependencies
 2) Tiller plugin
