@@ -15,8 +15,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 4,
-  "iteration": 1570034257183,
+  "id": 5,
+  "iteration": 1570034113372,
   "links": [],
   "panels": [
     {
@@ -24,187 +24,14 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
-        "h": 8,
+        "h": 9,
         "w": 12,
         "x": 0,
         "y": 0
-      },
-      "id": 8,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
-      "percentage": false,
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "expr": "ui_request_count{kubernetes_namespace=~\"$namespace\"}",
-          "refId": "A"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "UI HTTP request rate",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "fill": 1,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 9,
-        "w": 12,
-        "x": 0,
-        "y": 8
-      },
-      "id": 6,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "expr": "histogram_quantile(0.95,sum(rate(ui_request_response_time_bucket{kubernetes_namespace=~\"$namespace\"}[5m])) by (le))",
-          "format": "time_series",
-          "hide": false,
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "HTTP response time 95th percentile",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "fill": 1,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 9,
-        "w": 12,
-        "x": 0,
-        "y": 17
       },
       "id": 4,
       "legend": {
@@ -233,7 +60,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(ui_request_count{kubernetes_namespace=~\"$namespace\", http_status=~\"[45].*\"}[1m])",
+          "expr": "rate(comment_count{kubernetes_namespace=~\"$namespace\"}[1h])",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -243,7 +70,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Rate of UI HTTP request with error",
+      "title": "Comment count rate",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -286,14 +113,13 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Prometheus",
-      "description": "All HTTP requests that UI service receives",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
-        "h": 12,
+        "h": 9,
         "w": 12,
         "x": 0,
-        "y": 26
+        "y": 9
       },
       "id": 2,
       "legend": {
@@ -322,17 +148,18 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(ui_request_count{kubernetes_namespace=~\"$namespace\"}[1m])",
+          "expr": "rate(post_count{kubernetes_namespace=~\"$namespace\"}[1h])",
           "format": "time_series",
+          "hide": false,
           "intervalFactor": 1,
-          "refId": "B"
+          "refId": "A"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "UI HTTP Requests",
+      "title": "Post count rate",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -370,7 +197,6 @@
       }
     }
   ],
-  "refresh": false,
   "schemaVersion": 19,
   "style": "dark",
   "tags": [],
@@ -406,7 +232,7 @@
     ]
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-15m",
     "to": "now"
   },
   "timepicker": {
@@ -435,7 +261,7 @@
     ]
   },
   "timezone": "",
-  "title": "UI_Service_Monitoring",
-  "uid": "_tt2XotZz",
-  "version": 4
+  "title": "Business_logic_Monitoring",
+  "uid": "jS5kYBpWk",
+  "version": 3
 }
